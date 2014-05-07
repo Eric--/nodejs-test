@@ -28,12 +28,12 @@ function upload(response, request)
 	console.log("Request handler 'upload' was called.");
 	
 	var form = new formidable.IncomingForm();
-	form.uploadDir = "./bat_command";//至关重要
+	form.uploadDir = "../../resource/img";//至关重要
   	console.log("about to parse");
   	form.parse(request, function(error, fields, files) {
 	    console.log("parsing done");
 		console.log(files.upload.path);
-	    fs.renameSync(files.upload.path, "./bat_command/yjc.gif");
+	    fs.renameSync(files.upload.path, "../../resource/img/yjc.gif");
 	    response.writeHead(200, {"Content-Type": "text/html"});
 	    response.write("received image:<br/>");
 	    response.write("<img src='/show' />");
@@ -43,7 +43,7 @@ function upload(response, request)
 
 function show(response) {
   console.log("Request handler 'show' was called.");
-  fs.readFile("./bat_command/yjc.gif", "binary", function(error, file) {
+  fs.readFile("../../resource/img/yjc.gif", "binary", function(error, file) {
     if(error) {
       response.writeHead(500, {"Content-Type": "text/plain"});
       response.write(error + "\n");
