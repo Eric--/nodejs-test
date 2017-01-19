@@ -1,0 +1,13 @@
+{
+  "name": "webpackpro",
+  "version": "0.0.0",
+  "description": "webpack project",
+  "main": "index.js",
+  "scripts": {},
+  "author": "erayliu",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "progbar": "^1.1.1"
+  }
+}
