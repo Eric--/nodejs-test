@@ -1,7 +1,7 @@
 {
-  "name": "webpackpro",
+  "name": "playhub",
   "version": "0.0.0",
-  "description": "webpack project",
+  "description": "node test project",
   "main": "index.js",
   "scripts": {},
   "author": "erayliu",
