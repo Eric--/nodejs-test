@@ -8,6 +8,7 @@
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {
+    "copy-dir": "^0.3.0",
     "progbar": "^1.1.1"
   }
 }
