@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>ws</title>
+</head>
+<body>
+    <div>测试ws</div>
+    <input type="text" placeholder="please input message" id="message">
+    <button onclick="sendMessage();">SendMsg</button>
+    <button onclick="closeWs();">CloseWs</button>
+    <script src="../js/lib/jquery-1.11.3.js"></script>
+<script>
+    //dev 调试的ws地址,同一时刻只允许一个连接
+    var ws = new WebSocket("ws://localhost:9222/devtools/page/1e799774-96de-405f-bc3d-5f63daccc03b");
+
+    ws.onopen = function (e) {
+
+        console.log('Connection to server opened');
+        var msg1 = {
+            id: 1,
+            method: "Network.enable",
+            params: {}
+        }
+
+        ws.send(JSON.stringify(msg1));
+    }
+    ws.onmessage = function(e){
+        console.log("accept server's data");
+        console.log(e.data);
+    }
+    ws.onclose = function(e){
+        console.log('connection is closed');
+    }
+    function sendMessage() {
+        ws.send($('#message').val());
+    }
+    function closeWs(){
+        ws.close();
+    }
+</script>
+</body>
+</html>
