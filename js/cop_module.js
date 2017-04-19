@@ -5,7 +5,7 @@
 var copydir = require('copy-dir');
 
 var srcDir = 'P:\\var\\nodes\\workspace\\webpack-react\\webpack\\node_modules\\';
-var desDir = 'P:\\var\\alisvn\\workspace\\huiyou\\trunk\\assets\\node_modules\\';
+var desDir = 'P:\\var\\nodes\\workspace\\guangfa\\node_modules\\';
 
 copydir(srcDir, desDir, function(err){
     if(err){
@@ -14,3 +14,7 @@ copydir(srcDir, desDir, function(err){
         console.log('ok');
     }
 });
+
+// var People = require('./es6.js');
+// var people1 = new People('xiaolong');
+// people1.sayHi();
