@@ -1,3 +1,7 @@
+/**
+ * es-module-lexer  js词法分析器
+ */
+
 const { init, parse } = require('es-module-lexer');
 
 (async () => {
