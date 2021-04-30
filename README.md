@@ -1,5 +1,9 @@
 ### This is node test hub
 * 这里需要写一些node的脚本
+* 如果node要支持es6模式
+```
+package.json 中要加入 {"type": "module"}
+```
 
 ---
 

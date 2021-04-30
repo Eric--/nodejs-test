@@ -6,7 +6,9 @@
   "scripts": {},
   "author": "erayliu",
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "es-module-lexer": "^0.4.1"
+  },
   "devDependencies": {
     "copy-dir": "^0.3.0",
     "progbar": "^1.1.1"
